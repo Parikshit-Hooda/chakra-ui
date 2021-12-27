@@ -1,5 +1,39 @@
 # Change Log
 
+## 1.16.0
+
+### Minor Changes
+
+- [#4979](https://github.com/chakra-ui/chakra-ui/pull/4979)
+  [`d5461a452`](https://github.com/chakra-ui/chakra-ui/commit/d5461a4522aaee47b91a1a432601556e334a71c3)
+  Thanks [@segunadebayo](https://github.com/segunadebayo)! - ### Add support
+  peer pseudo style props
+
+  You can now style an element based on the state of its general sibling (marked
+  with `.peer` or `data-peer`) attribute.
+
+  ```jsx live=false
+  <>
+    <input type="checkbox" data-peer />
+    <Box bg="white" _peerFocus={{ bg: "green.400" }} />
+  </>
+  ```
+
+  The peer properties you can apply are `_peerHover`, `_peerFocus`,
+  `_peerFocusVisible`, `_peerActive`, `_peerInvalid`,
+  `_peerChecked`,`_peerFocusWithin`, `_peerPlaceholderShown`, `_peerDisabled`
+
+  ### New style props
+
+  Added `_placeholderShown` pseudo props for styling elements when sibling
+  inputs have placeholder shown.
+
+  Added `_ltr` pseudo props for styling elements in LTR writing mode. This is
+  useful for products with RTL first approach.
+
+  Added `_mediaReduceMotion` pseudo props to apply reduce motion styles to
+  elements. This is useful when you need to remove CSS animations/transitions.
+
 ## 1.15.0
 
 ### Minor Changes
